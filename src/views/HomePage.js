@@ -61,7 +61,7 @@ const HomePage = () => {
   ]
 
   return (
-    <div className='grid gap-y-8'>
+    <div className='bg-gradient-to-b from-[#1e1e1e] to-[#121212] px-8 py-5'>
       <Section
         title="Hoşuna gidebilecek programlar"
         more="/more"
