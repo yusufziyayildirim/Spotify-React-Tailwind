@@ -6,7 +6,7 @@ import CollectionPage from "views/CollectionPage"
 
 const Content = () => {
   return (
-    <div>
+    <div className='w-full px-8'>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
