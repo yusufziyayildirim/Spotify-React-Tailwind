@@ -1,7 +1,13 @@
+import Title from 'components/Title'
 
 const HomePage = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Title 
+        title="Hoşuna gidebilecek programlar" 
+        more="/more"
+      />
+    </div>
   )
 }
 
