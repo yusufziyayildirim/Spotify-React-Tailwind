@@ -24,9 +24,12 @@
     .scrollbar::-webkit-scrollbar-track {
         @apply bg-black mt-1
     }
+    .scrollbar.scrollbar-content::-webkit-scrollbar-track {
+        @apply bg-backdrop
+    }
     
     .scrollbar::-webkit-scrollbar-thumb {
-        @apply bg-backdrop rounded-lg transition-colors
+        @apply bg-[#606060] rounded-lg transition-colors
     }
     
     .scrollbar::-webkit-scrollbar-thumb:hover {

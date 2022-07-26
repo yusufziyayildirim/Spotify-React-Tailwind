@@ -6,7 +6,7 @@ import CollectionPage from "views/CollectionPage"
 
 const Content = () => {
   return (
-    <div className='w-full px-8'>
+    <div className='flex-auto overflow-auto px-8 scrollbar scrollbar-content'>
       <Navbar />
       <div className='pt-2'></div>
       <Routes>
