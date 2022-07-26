@@ -17,4 +17,19 @@
     .active-link{
         @apply bg-active rounded !text-white
     }
+    .scrollbar::-webkit-scrollbar {
+        @apply w-1 
+    }
+    
+    .scrollbar::-webkit-scrollbar-track {
+        @apply bg-black mt-1
+    }
+    
+    .scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-backdrop rounded-lg transition-colors
+    }
+    
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply bg-white 
+    }
 }
