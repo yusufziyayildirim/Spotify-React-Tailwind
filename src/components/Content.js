@@ -8,6 +8,7 @@ const Content = () => {
   return (
     <div className='w-full px-8'>
       <Navbar />
+      <div className='pt-2'></div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage/>} />
