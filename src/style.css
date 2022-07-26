@@ -429,7 +429,7 @@ html,  body,  #root {
 }
 
 .scrollbar::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 0.5rem;
 }
 
 .scrollbar::-webkit-scrollbar-track {
@@ -637,6 +637,14 @@ html,  body,  #root {
   height: 2rem;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[3\.75rem\] {
+  height: 3.75rem;
+}
+
 .w-60 {
   width: 15rem;
 }
@@ -663,6 +671,10 @@ html,  body,  #root {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-x-4 {
@@ -760,6 +772,11 @@ html,  body,  #root {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .text-sm {
