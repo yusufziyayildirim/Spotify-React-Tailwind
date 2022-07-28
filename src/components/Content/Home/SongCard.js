@@ -1,20 +1,38 @@
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Icon } from "assets/icons/Icons";
+import { useDispatch, useSelector } from "react-redux/es/exports";
+import { setCurrent } from "stores/player";
 
 const SongCard = ({ item }) => {
 
+  const dispatch = useDispatch()
+  const { current, playing, controls } = useSelector(state => state.player)
   const imageStyle = (item) => {
     switch (item.type) {
-        case 'artist':
-            return 'rounded-full'
+      case 'artist':
+        return 'rounded-full'
 
-        case 'podcast':
-            return 'rounded-xl'
+      case 'podcast':
+        return 'rounded-xl'
 
-        default:
-            return 'rounded'
+      default:
+        return 'rounded'
     }
-}
+  }
+
+  const updateCurrent = () => {
+    if (current.id === item.id) {
+      if (playing) {
+        controls.pause()
+      } else {
+        controls.play()
+      }
+    } else {
+      dispatch(setCurrent(item))
+    }
+  }
+
+  const isCurrentItem = (current?.id === item.id && playing)
 
   return (
     <NavLink
@@ -25,8 +43,9 @@ const SongCard = ({ item }) => {
       <div className="pt-[100%] relative mb-4">
         <img src={item.image} className={`absolute inset-0 object-cover w-full h-full ${imageStyle(item)}`} />
         <button
-          className={`w-10 h-10 rounded-full bg-primary absolute hidden group-hover:flex group-focus:flex bottom-2 right-2 items-center justify-center`}>
-          <Icon name="play" size={16} />
+          onClick={updateCurrent}
+          className={`w-10 h-10 rounded-full bg-primary absolute group-hover:flex group-focus:flex bottom-2 right-2 items-center justify-center ${!isCurrentItem ? 'hidden' : 'flex'}`}>
+          <Icon name={isCurrentItem ? 'pause' : 'play'} size={16} />
         </button>
       </div>
       <h6 className="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">
