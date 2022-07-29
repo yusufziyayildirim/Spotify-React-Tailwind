@@ -1,5 +1,5 @@
 import Player from "./Footer/Player"
-import { useDispatch, useSelector } from "react-redux/es/exports";
+import { useSelector } from "react-redux/es/exports";
 
 const Footer = () => {
   const current = useSelector(state => state.player.current)
