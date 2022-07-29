@@ -1,6 +1,6 @@
 import { Icon } from "assets/icons/Icons";
 
-const Search = () => {
+const SearchBox = () => {
     return (
         <div className="mr-auto ml-4 relative">
             <label htmlFor="search-input" className="text-black w-12 h-10 flex items-center justify-center absolute top-0 left-0">
@@ -11,4 +11,4 @@ const Search = () => {
     )
 }
 
-export default Search
+export default SearchBox
